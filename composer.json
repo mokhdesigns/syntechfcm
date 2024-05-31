@@ -22,5 +22,12 @@
     "require-dev": {
         "orchestra/testbench": "^3.5"
     },
-    "minimum-stability": "dev"
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "phpunit"
+    }
 }
