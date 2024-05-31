@@ -8,8 +8,8 @@
             "Syntech\\Syntechfcm\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+   "minimum-stability": "RC",
+   
     "extra": {
         "laravel": {
             "providers": [
