@@ -8,6 +8,8 @@
             "Syntech\\Syntechfcm\\": "src/"
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
@@ -25,8 +27,6 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "scripts": {
         "test": "phpunit"
     }
