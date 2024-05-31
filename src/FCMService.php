@@ -1,6 +1,6 @@
 <?php
 
-namespace  Syntech\SyntechFcm;
+namespace  Syntech\Syntechfcm;
 
 use Google\Client as GoogleClient;
 use Illuminate\Support\Facades\Http;

@@ -1,6 +1,6 @@
 <?php
 
-namespace  Syntech\SyntechFcm\Facades;
+namespace Syntech\Syntechfcm\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
