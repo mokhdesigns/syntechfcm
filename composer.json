@@ -18,11 +18,8 @@
         }
     },
     "require": {
-        "php": ">=8.0"
-
-    },
-    "require-dev": {
-        "orchestra/testbench": "^3.5"
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0",
+        "illuminate/notifications": "^7.0|^8.0|^9.0|^10.0"
     },
     "config": {
         "sort-packages": true
@@ -30,4 +27,5 @@
     "scripts": {
         "test": "phpunit"
     }
+
 }
