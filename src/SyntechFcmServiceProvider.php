@@ -4,13 +4,15 @@ namespace Syntech\Syntechfcm;
 
 use Exception;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Notifications\ChannelManager;
+use Syntech\Syntechfcm\Channels\FcmChannel;
 
 class SyntechFcmServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(FCMService::class, function ($app) {
-            return new FCMService();
+        $this->app->singleton('fcm', function ($app) {
+            return new FcmService();
         });
 
         $this->mergeConfigFrom(
@@ -25,5 +27,9 @@ class SyntechFcmServiceProvider extends ServiceProvider
                 __DIR__ . '/../config/syntechfcm.php' => config_path('syntechfcm.php'),
             ], 'config');
         }
+
+        $this->app->make(ChannelManager::class)->extend('fcm', function ($app) {
+            return new FcmChannel();
+        });
     }
 }
