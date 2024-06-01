@@ -189,4 +189,4 @@ For support, open an issue or contact the maintainer.
 
 Below is an example of the `toFcm` method implementation in your notification class:
 
-![toFcm Method Example](images/toFcm-method-example.png)
+![toFcm Method Example](images/image.png)
