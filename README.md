@@ -185,3 +185,8 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 
 For support, open an issue or contact the maintainer.
 
+## Example Code Image
+
+Below is an example of the `toFcm` method implementation in your notification class:
+
+![toFcm Method Example](images/toFcm-method-example.png)
