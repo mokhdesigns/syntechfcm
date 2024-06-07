@@ -19,7 +19,7 @@ This guide provides step-by-step instructions to integrate `Syntech\SyntechFcm` 
 2. **Publish the configuration file**:
 
     ```bash
-    php artisan vendor:publish --provider="Syntech\SyntechFcm\SyntechFcmServiceProvider"
+    php artisan vendor:publish --provider="Syntech\Syntechfcm\SyntechFcmServiceProvider"
     ```
 
 3. **Configure your FCM credentials**:
