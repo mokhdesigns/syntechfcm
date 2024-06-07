@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'project_id' => env('FIREBASE_PROJECT_ID'),
-    'credentials' => storage_path('app/firebase/service-account-file.json'),
+    'project_id' => env('FCM_PROJECT_ID'),
+    'client_email' => env('FCM_CLIENT_EMAIL'),
+    'private_key' => env('FCM_PRIVATE_KEY'),
 ];

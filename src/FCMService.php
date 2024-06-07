@@ -19,15 +19,15 @@ class FcmService
 
     protected function getAccessToken()
     {
-        $credentialsPath = config('syntechfcm.credentials');
-        $credentials = json_decode(file_get_contents($credentialsPath), true);
+        $clientEmail = config('syntechfcm.client_email');
+        $privateKey = config('syntechfcm.private_key');
 
-        $jwt = $this->createJwt($credentials);
+        $jwt = $this->createJwt($clientEmail, $privateKey);
 
         return $this->exchangeJwtForAccessToken($jwt);
     }
 
-    protected function createJwt($credentials)
+    protected function createJwt($clientEmail, $privateKey)
     {
         $header = [
             'alg' => 'RS256',
@@ -38,8 +38,8 @@ class FcmService
         $expiry = $now + 3600;
 
         $payload = [
-            'iss' => $credentials['client_email'],
-            'sub' => $credentials['client_email'],
+            'iss' => $clientEmail,
+            'sub' => $clientEmail,
             'aud' => 'https://oauth2.googleapis.com/token',
             'iat' => $now,
             'exp' => $expiry,
@@ -53,7 +53,7 @@ class FcmService
         openssl_sign(
             $base64UrlHeader . "." . $base64UrlPayload,
             $signature,
-            $credentials['private_key'],
+            $privateKey,
             'sha256'
         );
         $base64UrlSignature = $this->base64UrlEncode($signature);
@@ -102,7 +102,6 @@ class FcmService
 
     public function send($data)
     {
-
         $url = "https://fcm.googleapis.com/v1/projects/{$this->projectId}/messages:send";
 
         $notification = array_merge([
