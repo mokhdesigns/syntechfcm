@@ -28,8 +28,9 @@ This guide provides step-by-step instructions to integrate `Syntech\SyntechFcm` 
 
     ```php
     return [
-    'project_id' => env('FIREBASE_PROJECT_ID'),
-    'credentials' => storage_path('app/firebase/service-account-file.json'),
+    'project_id'   => env('FCM_PROJECT_ID'),
+    'client_email' => env('FCM_CLIENT_EMAIL'),
+    'private_key'  => env('FCM_PRIVATE_KEY'),
     ];
     ```
 
@@ -37,6 +38,8 @@ This guide provides step-by-step instructions to integrate `Syntech\SyntechFcm` 
 
     ```env
     FCM_PROJECT_ID=your-project-id
+    FCM_CLIENT_EMAIL=your-client-email
+    FCM_PRIVATE_KEY=your-private-key
     ```
 
  
