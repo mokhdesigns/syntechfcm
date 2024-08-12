@@ -3,7 +3,7 @@
     "description": "A Laravel package for FCM",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.2",
     "autoload": {
         "psr-4": {
             "Syntech\\Syntechfcm\\": "src/"
