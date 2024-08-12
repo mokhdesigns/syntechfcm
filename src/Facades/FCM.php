@@ -4,7 +4,7 @@ namespace  Syntech\Syntechfcm\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class FCM extends Facade
+class Fcm extends Facade
 {
     protected static function getFacadeAccessor()
     {
