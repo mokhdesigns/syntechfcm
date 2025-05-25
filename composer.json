@@ -3,7 +3,7 @@
     "description": "A Laravel package for FCM",
     "type": "library",
     "license": "MIT",
-    "version":"1.3.0",
+    "version":"1.3.1",
     "autoload": {
         "psr-4": {
             "Syntech\\Syntechfcm\\": "src/"
@@ -19,8 +19,8 @@
         }
     },
     "require": {
-        "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0",
-        "illuminate/notifications": "^7.0|^8.0|^9.0|^10.0|^11.0"
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/notifications": "^7.0|^8.0|^9.0|^10.0|^11.0|^12.0"
     },
     "config": {
         "sort-packages": true
