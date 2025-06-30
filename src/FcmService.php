@@ -117,6 +117,26 @@ class FcmService
             ],
         ];
 
+        if (isset($data['data'])) {
+            $message['message']['data'] = $data['data'];
+        }
+
+        if (isset($data['android'])) {
+            $message['message']['android'] = $data['android'];
+        }
+
+        if (isset($data['webpush'])) {
+            $message['message']['webpush'] = $data['webpush'];
+        }
+
+        if (isset($data['apns'])) {
+            $message['message']['apns'] = $data['apns'];
+        }
+
+        if (isset($data['fcm_options'])) {
+            $message['message']['fcm_options'] = $data['fcm_options'];
+        }
+
         $response = Http::withToken($this->accessToken)->post($url, $message);
 
         return $response->json();
